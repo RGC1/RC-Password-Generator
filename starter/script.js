@@ -107,8 +107,30 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+  let passwordOptions = getPasswordOptions ()
+  let allChar = specialCharacters + numericCharacters + lowerCasedCharacters + upperCasedCharacters;
+  if (passwordOptions.specialCharacters) {
+    allChar =+ specialCharacters;
+  }
+  if (passwordOptions.numericCharacters) {
+    allChar =+ numericCharacters;
+  }
+  if (passwordOptions.lowerCasedCharacters) {
+    allChar =+ lowerCasedCharacters;
+  }
+  if (passwordOptions.upperCasedCharacters) {
+    allChar =+ upperCasedCharacters;
+  }
 
 }
+
+let password = "";
+for (let i= 0; i < getPasswordOptions.length; i++) {
+  let anyChar = getRandom(allChar.split(""));
+  password += anyChar;
+}
+
+/*
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
@@ -123,3 +145,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+*/
