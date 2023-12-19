@@ -90,7 +90,13 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  let passwordOptions = {
+    lowerCaseChar:promt("Confirm how many characters the password should contain: between 8 and 128."),
+    upperCaseChar: confirm("Should the password contain lowercase characters?"),
+    specialChar:confirm("Should the password contain special characthers?"),
+    numericChar: confirm("Should the password contain number?"),
+  };
+  return passwordOptions;
 }
 
 // Function for getting a random element from an array
