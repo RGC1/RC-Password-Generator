@@ -122,12 +122,14 @@ function generatePassword() {
     allChar =+ upperCasedCharacters;
   }
 
-}
+
 
 let password = "";
 for (let i= 0; i < getPasswordOptions.length; i++) {
   let anyChar = getRandom(allChar.split(""));
   password += anyChar;
+}
+return password;
 }
 
 /*
